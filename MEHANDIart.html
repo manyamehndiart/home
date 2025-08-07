@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manya Mehndi Arts - Traditional Indian Mehndi Artist in Mumbai</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for elegant typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ScrollReveal.js for animations -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+      /* This targets the ad banner from tiiny.host and hides it */
+        div > a[href*="tiiny.host"] {
+        display: none !important;
+        }
+    </style>
+
+    <style>
+        /* Define the new custom color palette */
+        :root {
+            --bg-main: #FFFDF5;      /* Creamy White */
+            --bg-secondary: #F3EAD3; /* Light Beige */
+            --text-dark: #2C3E50;    /* Dark Slate Blue */
+            --primary: #005F6B;      /* Dark Teal */
+            --accent: #D4AF37;       /* Gold */
+        }
+
+        /* Custom styles for applying the fonts and new colors */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+        }
+        .font-display {
+            font-family: 'Georgia', serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Helper classes for the new color scheme */
+        .bg-primary { background-color: var(--primary); }
+        .bg-secondary { background-color: var(--bg-secondary); }
+        .bg-accent { background-color: var(--accent); }
+        .bg-text-dark { background-color: var(--text-dark); }
+        
+        .text-primary { color: var(--primary); }
+        .text-accent { color: var(--accent); }
+        .text-main-bg { color: var(--bg-main); }
+        .text-text-dark { color: var(--text-dark); }
+
+        .border-accent { border-color: var(--accent); }
+        .hover-bg-accent:hover { background-color: var(--accent); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-main/80 backdrop-blur-lg shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="font-display text-3xl font-semibold text-primary">
+                Manya Mehndi Arts
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#services" class="text-text-dark/80 hover:text-primary transition duration-300">Services</a>
+                <a href="#gallery" class="text-text-dark/80 hover:text-primary transition duration-300">Gallery</a>
+                <a href="#about" class="text-text-dark/80 hover:text-primary transition duration-300">About</a>
+                <!-- UPDATED: Desktop Book Now button with counter -->
+                <a href="BOOKappointment.html" class="relative bg-primary text-main-bg px-5 py-2 rounded-full hover:bg-opacity-90 transition duration-300 shadow-sm">
+                    Book Now
+                    <span id="design-count-desktop" class="absolute -top-2 -right-2 bg-accent text-text-dark text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden"></span>
+                </a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-text-dark focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-main/95">
+            <a href="#services" class="block py-2 text-text-dark hover:text-primary">Services</a>
+            <a href="#gallery" class="block py-2 text-text-dark hover:text-primary">Gallery</a>
+            <a href="#about" class="block py-2 text-text-dark hover:text-primary">About</a>
+            <!-- UPDATED: Mobile Book Now button with counter -->
+            <a href="BOOKappointment.html" class="relative block mt-2 text-center bg-primary text-main-bg px-5 py-2 rounded-full hover:bg-opacity-90">
+                Book Now
+                <span id="design-count-mobile" class="absolute top-0 right-0 bg-accent text-text-dark text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden -mt-1 mr-2"></span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[85vh] text-white flex items-center justify-center scroll-reveal-hero">
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+        <video src="mainpage.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover"></video>
+        <div class="relative z-20 text-center px-4">
+            <h1 class="font-display text-6xl md:text-8xl mb-4 drop-shadow-lg font-semibold text-main-bg">Manya Mehndi Arts</h1>
+            <p class="text-xl md:text-3xl font-light max-w-3xl mx-auto text-main-bg/90">Adorning Hands with Tradition & Art for Your Special Occasions</p>
+            <a href="#gallery" class="mt-8 inline-block bg-accent text-text-dark font-semibold px-10 py-4 rounded-full text-lg hover:bg-opacity-90 transition duration-300 shadow-xl transform hover:scale-105">View Our Designs</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-secondary">
+        <div class="container mx-auto px-6">
+            <div class="scroll-reveal-title">
+                <h2 class="font-display text-5xl text-center text-primary mb-2">Our Services</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-12"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Service Card 1: Bridal Mehndi -->
+                <div class="bg-main rounded-lg shadow-xl p-8 text-center hover:scale-105 transition-transform duration-300 scroll-reveal-card">
+                    <div class="text-5xl text-accent mb-4">❀</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-primary">Bridal Mehndi</h3>
+                    <p class="text-text-dark/80">Exquisite and intricate full-hand and leg designs, customized to tell your story and complement your bridal look.</p>
+                </div>
+                <!-- Service Card 2: Sangeet & Parties -->
+                <div class="bg-main rounded-lg shadow-xl p-8 text-center hover:scale-105 transition-transform duration-300 scroll-reveal-card" data-sr-delay="200">
+                    <div class="text-5xl text-accent mb-4">✧</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-primary">Sangeet & Parties</h3>
+                    <p class="text-text-dark/80">Elegant and stylish designs for guests at weddings, engagements, and sangeet ceremonies. Group packages available.</p>
+                </div>
+                <!-- Service Card 3: Festivals & Events -->
+                <div class="bg-main rounded-lg shadow-xl p-8 text-center hover:scale-105 transition-transform duration-300 scroll-reveal-card" data-sr-delay="400">
+                    <div class="text-5xl text-accent mb-4">✩</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-primary">Festivals & Events</h3>
+                    <p class="text-text-dark/80">Celebrate Diwali, Eid, Karva Chauth, and other festivals with beautiful, traditional mehndi art. Also available for corporate events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-main">
+        <div class="container mx-auto px-6">
+            <div class="scroll-reveal-title">
+                <h2 class="font-display text-5xl text-center text-primary mb-2">Our Gallery</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-12"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+                <!-- Gallery Item 1 -->
+                <a href="ARABICstyle.html" class="group relative overflow-hidden rounded-2xl shadow-md block scroll-reveal-gallery">
+                     <img src="arabic.JPG" alt="Arabic Style Mehndi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                         <p class="text-white text-lg font-semibold">Arabic Style</p>
+                     </div>
+                </a>
+                <!-- Gallery Item 2 -->
+                <a href="INDIANstyle.html" class="group relative overflow-hidden rounded-2xl shadow-md block scroll-reveal-gallery">
+                    <img src="indian.JPG" alt="Indian Style Mehndi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                         <p class="text-white text-lg font-semibold">Indian Style</p>
+                     </div>
+                </a>
+                <!-- Gallery Item 3 -->
+                <a href="minimalistdesign.html" class="group relative overflow-hidden rounded-2xl shadow-md block scroll-reveal-gallery">
+                    <img src="minimalist.JPG" alt="Minimalist Mehndi Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold">Minimalist Art</p>
+                    </div>
+                </a>
+                <!-- Gallery Item 4 -->
+                <a href="BRIDALmehndi.html" class="group relative overflow-hidden rounded-2xl shadow-md block scroll-reveal-gallery">
+                    <img src="bridal.JPG" alt="Bridal Mehndi Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold">Bridal Mehndi</p>
+                    </div>
+                </a>
+                <!-- Gallery Item 5 -->
+                <a href="GROOMmehndi.html" class="group relative overflow-hidden rounded-2xl shadow-md block scroll-reveal-gallery">
+                    <img src="groom.JPG" alt="Groom Mehndi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold">Groom's Mehndi</p>
+                    </div>
+                </a>
+                <!-- Gallery Item 6 -->
+                <a href="FEETmehandi.html" class="group relative overflow-hidden rounded-2xl shadow-md block scroll-reveal-gallery">
+                    <img src="Feet.JPG" alt="Mehndi on Feet" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold">Bridal Feet</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-secondary scroll-reveal-about">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/3">
+                <img src="https://placehold.co/400x400/F3EAD3/2C3E50?text=Vardan" alt="Portrait of Vardan, the mehndi artist" class="rounded-full shadow-2xl mx-auto border-8 border-main">
+            </div>
+            <div class="md:w-2/3 text-center md:text-left">
+                <h2 class="font-display text-5xl text-primary mb-6">Meet Vardan</h2>
+                <p class="text-lg text-text-dark/90 mb-4 leading-relaxed">
+                    Hello! I'm Vardan, a professional mehndi artist based in the heart of Mumbai. For me, mehndi is more than just an art form; it's a celebration of culture, beauty, and life's most joyous moments. I fell in love with this ancient tradition as a child and have spent over a decade perfecting my craft.
+                </p>
+                <p class="text-lg text-text-dark/90 leading-relaxed">
+                    I use only 100% natural and organic henna paste, ensuring a rich, dark stain and a safe experience for your skin. My passion is to create unique designs that reflect your personality and make your special day even more memorable.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-dark text-main-bg">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <p class="font-display text-3xl mb-4 font-semibold text-accent">Manya Mehndi Arts</p>
+            <p class="mb-6 text-main-bg/80">Professional Mehndi Artist | Mumbai, Maharashtra</p>
+            <p class="text-sm text-main-bg/60">&copy; <span id="year"></span> Manya Mehndi Arts. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // --- NEW: Function to update the count on the Book Now buttons ---
+        function updateBookNowCounters() {
+            const designs = JSON.parse(localStorage.getItem('selectedDesigns') || '[]');
+            const count = designs.length;
+            const desktopBadge = document.getElementById('design-count-desktop');
+            const mobileBadge = document.getElementById('design-count-mobile');
+
+            if (count > 0) {
+                desktopBadge.textContent = count;
+                mobileBadge.textContent = count;
+                desktopBadge.classList.remove('hidden');
+                mobileBadge.classList.remove('hidden');
+            } else {
+                desktopBadge.classList.add('hidden');
+                mobileBadge.classList.add('hidden');
+            }
+        }
+
+        // ScrollReveal Animations & Initial Counter Update
+        window.addEventListener('load', () => {
+            // Update the button count when the page loads
+            updateBookNowCounters();
+
+            const sr = ScrollReveal({
+                distance: '50px',
+                duration: 1500,
+                easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+                reset: false
+            });
+
+            sr.reveal('.scroll-reveal-hero', { origin: 'top' });
+            sr.reveal('.scroll-reveal-title', { origin: 'top', duration: 1000 });
+            sr.reveal('.scroll-reveal-card', { origin: 'bottom', interval: 200 });
+            sr.reveal('.scroll-reveal-gallery', { origin: 'bottom', interval: 100, scale: 0.9 });
+            sr.reveal('.scroll-reveal-about', { origin: 'left', distance: '80px' });
+        });
+    </script>
+</body>
+</html>
+<script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
