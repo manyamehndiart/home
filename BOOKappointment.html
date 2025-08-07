@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Appointment | Manya Mehndi Arts</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* This targets the ad banner from tiiny.host and hides it */
+        div > a[href*="tiiny.host"] {
+        display: none !important;
+        }
+    </style>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Define the new custom color palette */
+        :root {
+            --bg-main: #FFFDF5;      /* Creamy White */
+            --bg-secondary: #F3EAD3; /* Light Beige */
+            --text-dark: #2C3E50;    /* Dark Slate Blue */
+            --primary: #005F6B;      /* Dark Teal */
+            --accent: #D4AF37;      /* Gold */
+        }
+
+        /* Custom styles for applying the fonts and new colors */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-secondary);
+            color: var(--text-dark);
+        }
+        .font-display {
+            font-family: 'Georgia', serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Helper classes for the new color scheme */
+        .bg-primary { background-color: var(--primary); }
+        .bg-secondary { background-color: var(--bg-secondary); }
+        .bg-accent { background-color: var(--accent); }
+        .bg-text-dark { background-color: var(--text-dark); }
+        
+        .text-primary { color: var(--primary); }
+        .text-accent { color: var(--accent); }
+        .text-main-bg { color: var(--bg-main); }
+        .text-text-dark { color: var(--text-dark); }
+
+        .border-accent { border-color: var(--bg-secondary); }
+        .focus-ring-accent:focus {
+            --tw-ring-color: var(--accent);
+            --tw-ring-opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <header class="bg-main/80 backdrop-blur-lg shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="https://manyamehndiart.tiiny.site" class="font-display text-3xl font-semibold text-primary">Manya Mehndi Arts</a>
+        </div>
+    </header>
+
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="font-display text-4xl md:text-5xl text-center text-primary mb-8">Book Your Appointment</h2>
+            
+            <div id="selected-designs-container" class="bg-main rounded-xl shadow-lg p-6 mb-8">
+            </div>
+
+            <form id="booking-form" class="space-y-6 bg-main rounded-xl shadow-xl p-8">
+                <input type="hidden" name="selected_designs" id="selected_designs_input">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block mb-2 font-semibold text-primary">Name <span class="text-red-500">*</span></label>
+                        <input type="text" name="name" id="name" required placeholder="Your Full Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus-ring-accent focus:outline-none transition">
+                    </div>
+                    <div>
+                        <label for="phone" class="block mb-2 font-semibold text-primary">Phone Number <span class="text-red-500">*</span></label>
+                        <input type="tel" name="phone" id="phone" required placeholder="Your Phone Number" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus-ring-accent focus:outline-none transition">
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="address" class="block mb-2 font-semibold text-primary">Address <span class="text-red-500">*</span></label>
+                    <textarea name="address" id="address" required placeholder="Your Full Address for the Appointment" rows="3" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus-ring-accent focus:outline-none transition"></textarea>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="date" class="block mb-2 font-semibold text-primary">Date <span class="text-red-500">*</span></label>
+                        <input type="date" name="date" id="date" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus-ring-accent focus:outline-none transition text-gray-700">
+                    </div>
+                    <div>
+                        <label for="time" class="block mb-2 font-semibold text-primary">Time of Arrival</label>
+                        <input type="time" name="time" id="time" placeholder="HH:MM" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus-ring-accent focus:outline-none transition text-gray-700">
+                    </div>
+                </div>
+                
+                <div>
+                    <button type="submit" class="w-full bg-primary text-main-bg font-bold text-lg p-4 rounded-lg hover:bg-opacity-90 transition duration-300 shadow-lg transform hover:scale-105">
+                        <i class="fab fa-whatsapp mr-2"></i> Book via WhatsApp
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-text-dark text-main-bg">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p class="font-display text-2xl mb-2 font-semibold text-accent">Manya Mehndi Arts</p>
+            <p class="text-sm text-main-bg/70">&copy; <span id="year"></span> Manya Mehndi Arts. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const designsContainer = document.getElementById('selected-designs-container');
+        const selectedDesignsInput = document.getElementById('selected_designs_input');
+        const bookingForm = document.getElementById('booking-form');
+
+        // Function to render the selected designs
+        function showSelectedDesigns() {
+            let designs = JSON.parse(localStorage.getItem('selectedDesigns') || '[]');
+            
+            designs = designs.map(d => ({ ...d, quantity: d.quantity || 1 }));
+            localStorage.setItem('selectedDesigns', JSON.stringify(designs));
+
+            if (designs.length > 0) {
+                // --- MODIFIED: Added user SVG icon next to the quantity controls ---
+                const designsHtml = designs.map(d => `
+                    <div class="relative group bg-secondary rounded-lg overflow-hidden shadow-sm flex flex-col justify-between">
+                        <div>
+                            <img src="${d.imgUrl}" alt="${d.name}" class="h-32 w-full object-cover">
+                            <p class="text-center text-sm font-semibold p-2 text-primary truncate" title="${d.name}">${d.name}</p>
+                        </div>
+                        <div class="flex items-center justify-center p-2 bg-main/50 border-t border-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-primary mr-2">
+                                <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                            </svg>
+                            <button class="quantity-btn bg-primary/20 text-primary rounded-full h-7 w-7 flex items-center justify-center hover:bg-primary/40 transition-colors" data-name="${d.name}" data-change="-1" title="Decrease quantity">
+                                <i class="fas fa-minus text-xs"></i>
+                            </button>
+                            <span class="mx-2 font-bold text-lg text-primary" title="Number of people for this design">${d.quantity}</span>
+                            <button class="quantity-btn bg-primary/20 text-primary rounded-full h-7 w-7 flex items-center justify-center hover:bg-primary/40 transition-colors" data-name="${d.name}" data-change="1" title="Increase quantity">
+                                <i class="fas fa-plus text-xs"></i>
+                            </button>
+                        </div>
+                        <button class="remove-btn absolute top-2 right-2 bg-black/50 text-white rounded-full h-6 w-6 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-500" data-name="${d.name}" title="Remove ${d.name}">
+                            <i class="fas fa-times text-xs"></i>
+                        </button>
+                    </div>
+                `).join('');
+
+                designsContainer.innerHTML = `
+                    <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+                        <h3 class="font-display text-2xl text-primary">Your Design Selection</h3>
+                        <button id="clear-all-btn" class="text-sm bg-primary/10 text-primary hover:bg-primary/20 px-3 py-1 rounded-md transition">Clear All</button>
+                    </div>
+                    <div id="designs-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">${designsHtml}</div>
+                `;
+                selectedDesignsInput.value = JSON.stringify(designs);
+            } else {
+                designsContainer.innerHTML = `
+                    <div class="text-center py-8">
+                        <div class="text-5xl text-accent mb-4">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="font-display text-2xl text-primary mb-2">Your Canvas is Empty</h3>
+                        <p class="text-text-dark/70 mb-6">Pick your favorite designs from our galleries to get started.</p>
+                        <a href="https://manyamehndiart.tiiny.site" class="bg-accent text-text-dark font-semibold px-6 py-2 rounded-full hover:bg-opacity-90 transition-all duration-300 shadow-md">Browse Designs</a>
+                    </div>
+                `;
+                selectedDesignsInput.value = '';
+            }
+        }
+
+        function updateQuantity(designName, change) {
+            let designs = JSON.parse(localStorage.getItem('selectedDesigns') || '[]');
+            
+            designs = designs.map(d => {
+                if (d.name === designName) {
+                    d.quantity = (d.quantity || 1) + change;
+                }
+                return d;
+            });
+
+            designs = designs.filter(d => d.quantity > 0);
+
+            localStorage.setItem('selectedDesigns', JSON.stringify(designs));
+            showSelectedDesigns();
+        }
+
+        function removeDesign(designName) {
+            let designs = JSON.parse(localStorage.getItem('selectedDesigns') || '[]');
+            designs = designs.filter(d => d.name !== designName);
+            localStorage.setItem('selectedDesigns', JSON.stringify(designs));
+            showSelectedDesigns();
+        }
+
+        function clearAllDesigns() {
+            localStorage.removeItem('selectedDesigns');
+            showSelectedDesigns();
+        }
+
+        designsContainer.addEventListener('click', function(event) {
+            const removeButton = event.target.closest('.remove-btn');
+            const clearButton = event.target.closest('#clear-all-btn');
+            const quantityButton = event.target.closest('.quantity-btn');
+            
+            if (quantityButton) {
+                const designName = quantityButton.dataset.name;
+                const change = parseInt(quantityButton.dataset.change, 10);
+                updateQuantity(designName, change);
+            } else if (removeButton) {
+                const designName = removeButton.dataset.name;
+                removeDesign(designName);
+            } else if (clearButton) {
+                clearAllDesigns();
+            }
+        });
+
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById("date").setAttribute('min', today);
+
+        bookingForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value || 'Not specified';
+
+            const designs = JSON.parse(localStorage.getItem('selectedDesigns') || '[]');
+            const designDetails = designs.length > 0
+                ? designs.map(d => {
+                    const personText = d.quantity > 1 ? 'people' : 'person';
+                    return ` - ${d.name} (for ${d.quantity} ${personText})`;
+                  }).join('\n')
+                : 'No specific designs selected.';
+
+            const whatsappNumber = '917900102926';
+
+            const message = `
+Hello Manya Mehndi Arts,
+
+I would like to book an appointment.
+Here are my details:
+*Name:* ${name}
+*Phone:* ${phone}
+*Address:* ${address}
+*Date:* ${date}
+*Time:* ${time}
+
+*Selected Designs & Persons:*
+${designDetails}
+
+Thank you!
+            `.trim().replace(/\n\s*\n/g, '\n');
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            
+            window.open(whatsappURL, '_blank');
+            setTimeout(() => {
+                bookingForm.reset();
+                clearAllDesigns();
+            }, 500);
+        });
+        
+        showSelectedDesigns();
+    </script>
+</body>
+</html>

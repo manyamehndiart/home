@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Mehndi Design - Manya Mehndi Arts</title>
+
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for elegant typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ScrollReveal.js for animations -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+      /* This targets the ad banner from tiiny.host and hides it */
+        div > a[href*="tiiny.host"] {
+        display: none !important;
+        }
+    </style>
+
+    <style>
+        /* Define the new custom color palette */
+        :root {
+            --bg-main: #FFFDF5;      /* Creamy White */
+            --bg-secondary: #F3EAD3; /* Light Beige */
+            --text-dark: #2C3E50;    /* Dark Slate Blue */
+            --primary: #005F6B;      /* Dark Teal */
+            --accent: #D4AF37;       /* Gold */
+        }
+
+        /* Custom styles for applying the fonts and new colors */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+        }
+        .font-display {
+            font-family: 'Georgia', serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Helper classes for the new color scheme */
+        .bg-primary { background-color: var(--primary); }
+        .bg-secondary { background-color: var(--bg-secondary); }
+        .bg-accent { background-color: var(--accent); }
+        .bg-text-dark { background-color: var(--text-dark); }
+        
+        .text-primary { color: var(--primary); }
+        .text-accent { color: var(--accent); }
+        .text-main-bg { color: var(--bg-main); }
+        .text-text-dark { color: var(--text-dark); }
+
+        .border-accent { border-color: var(--accent); }
+        .hover-bg-accent:hover { background-color: var(--accent); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-main/80 backdrop-blur-lg shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="https://manyamehndiart.tiiny.site" class="font-display text-3xl font-semibold text-primary">
+                Manya Mehndi Arts
+            </a>
+            <!-- UPDATED: Book Now button with a counter span -->
+            <a href="BOOKappointment.html" class="relative bg-primary text-main-bg px-5 py-2 rounded-full hover:bg-opacity-90 transition duration-300 shadow-sm">
+                Book Now
+                <span id="design-count" class="absolute -top-2 -right-2 bg-accent text-text-dark text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden"></span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content for Minimalist Mehndi Page -->
+    <main>
+        <!-- Page Title Section -->
+        <section class="py-16 md:py-24 bg-secondary scroll-reveal-title">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="font-display text-6xl md:text-7xl text-primary">Minimalist Mehndi Design</h1>
+                <div class="w-32 h-1 bg-accent mx-auto mt-4 mb-6"></div>
+                <p class="text-lg text-text-dark/80 max-w-3xl mx-auto">
+                    Embracing the beauty of simplicity. Less is more with these elegant and modern mehndi designs.
+                </p>
+            </div>
+        </section>
+
+        <!-- Description Section -->
+        <section class="py-20 bg-main scroll-reveal-section">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/D4AF37/2C3E50?text=Subtle+Mehndi+Accent" alt="Close-up of a minimalist mehndi design" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="font-display text-4xl text-primary mb-4">Modern, Subtle & Chic</h2>
+                    <p class="text-text-dark/80 mb-4 leading-relaxed">
+                        Minimalist mehndi is for the modern woman who loves tradition but with a contemporary twist. These designs focus on small, delicate elements—a single motif, a decorated fingertip, a simple band, or a small design on the back of the hand.
+                    </p>
+                    <p class="text-text-dark/80 mb-4 leading-relaxed">
+                        This style is perfect for those who want a touch of henna without the commitment of a full, heavy design. It's an ideal choice for parties, casual get-togethers, or even as a trendy, everyday accessory.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Minimalist Design Gallery Section -->
+        <section id="gallery" class="py-20 bg-secondary">
+            <div class="container mx-auto px-6">
+                <div class="scroll-reveal-title">
+                    <h2 class="font-display text-5xl text-center text-primary mb-2">Minimalist Design Gallery</h2>
+                    <div class="w-24 h-1 bg-accent mx-auto mb-12"></div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Gallery Card 1 -->
+                    <div class="bg-main p-3 rounded-lg shadow-lg flex flex-col items-center text-center scroll-reveal-card">
+                        <div class="group relative overflow-hidden rounded-md w-full">
+                            <img src="https://placehold.co/400x500/005F6B/FFFFFF?text=Single+Motif" alt="Minimalist Mehndi Design 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="mt-auto w-full pt-4">
+                            <p class="font-semibold text-primary mb-2">Single Motif</p>
+                            <button class="w-full bg-primary text-main-bg px-4 py-2 rounded-full hover:bg-opacity-90 transition" onclick="addDesign('Single Motif', 'https://placehold.co/400x500/005F6B/FFFFFF?text=Single+Motif')">Add Design</button>
+                        </div>
+                    </div>
+                    <!-- Gallery Card 2 -->
+                    <div class="bg-main p-3 rounded-lg shadow-lg flex flex-col items-center text-center scroll-reveal-card">
+                        <div class="group relative overflow-hidden rounded-md w-full">
+                            <img src="https://placehold.co/400x500/2C3E50/FFFFFF?text=Finger+Design" alt="Minimalist Mehndi Design 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="mt-auto w-full pt-4">
+                            <p class="font-semibold text-primary mb-2">Finger Design</p>
+                            <button class="w-full bg-primary text-main-bg px-4 py-2 rounded-full hover:bg-opacity-90 transition" onclick="addDesign('Finger Design', 'https://placehold.co/400x500/2C3E50/FFFFFF?text=Finger+Design')">Add Design</button>
+                        </div>
+                    </div>
+                    <!-- Gallery Card 3 -->
+                    <div class="bg-main p-3 rounded-lg shadow-lg flex flex-col items-center text-center scroll-reveal-card">
+                        <div class="group relative overflow-hidden rounded-md w-full">
+                            <img src="https://placehold.co/400x500/D4AF37/2C3E50?text=Henna+Ring" alt="Minimalist Mehndi Design 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="mt-auto w-full pt-4">
+                            <p class="font-semibold text-primary mb-2">Henna Ring</p>
+                            <button class="w-full bg-primary text-main-bg px-4 py-2 rounded-full hover:bg-opacity-90 transition" onclick="addDesign('Henna Ring', 'https://placehold.co/400x500/D4AF37/2C3E50?text=Henna+Ring')">Add Design</button>
+                        </div>
+                    </div>
+                    <!-- Gallery Card 4 -->
+                    <div class="bg-main p-3 rounded-lg shadow-lg flex flex-col items-center text-center scroll-reveal-card">
+                        <div class="group relative overflow-hidden rounded-md w-full">
+                            <img src="https://placehold.co/400x500/004B55/FFFFFF?text=Wrist+Detail" alt="Minimalist Mehndi Design 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="mt-auto w-full pt-4">
+                            <p class="font-semibold text-primary mb-2">Wrist Detail</p>
+                            <button class="w-full bg-primary text-main-bg px-4 py-2 rounded-full hover:bg-opacity-90 transition" onclick="addDesign('Wrist Detail', 'https://placehold.co/400x500/004B55/FFFFFF?text=Wrist+Detail')">Add Design</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking CTA Section -->
+        <section class="py-20 bg-main text-center scroll-reveal-section">
+            <div class="container mx-auto px-6">
+                <h2 class="font-display text-5xl text-primary mb-4">Love the Simple Things?</h2>
+                <p class="text-text-dark/80 text-lg max-w-2xl mx-auto mb-8">Get a chic and elegant minimalist mehndi design from Manya for your next event.</p>
+                <a href="BOOKappointment.html" class="bg-accent text-text-dark font-bold text-lg px-12 py-4 rounded-full hover:bg-opacity-90 transition duration-300 shadow-lg transform hover:scale-105">Book Now</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-text-dark text-main-bg">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <p class="font-display text-3xl mb-4 font-semibold text-accent">Manya Mehndi Arts</p>
+            <p class="mb-6 text-main-bg/80">Professional Mehndi Artist | Mumbai, Maharashtra</p>
+            <p class="text-sm text-main-bg/60">&copy; <span id="year"></span> Manya Mehndi Arts. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // --- NEW: Function to update the count on the Book Now button ---
+        function updateBookNowButton() {
+            const designs = JSON.parse(localStorage.getItem('selectedDesigns') || '[]');
+            const count = designs.length;
+            const countBadge = document.getElementById('design-count');
+
+            if (count > 0) {
+                countBadge.textContent = count;
+                countBadge.classList.remove('hidden');
+            } else {
+                countBadge.classList.add('hidden');
+            }
+        }
+
+        // Add Design Feature
+        function addDesign(name, imgUrl) {
+            let designs = JSON.parse(localStorage.getItem('selectedDesigns') || '[]');
+            if (!designs.some(d => d.name === name)) {
+                designs.push({ name, imgUrl });
+                localStorage.setItem('selectedDesigns', JSON.stringify(designs));
+                alert(`'${name}' has been added to your selection.`);
+            } else {
+                alert(`'${name}' is already in your selection.`);
+            }
+            // Update the button count after adding a design
+            updateBookNowButton();
+        }
+
+        // ScrollReveal Animations & Initial Counter Update
+        window.addEventListener('load', () => {
+            // Update the button count when the page loads
+            updateBookNowButton();
+
+            const sr = ScrollReveal({
+                distance: '50px',
+                duration: 1500,
+                easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+                reset: false
+            });
+
+            sr.reveal('.scroll-reveal-title', { origin: 'top' });
+            sr.reveal('.scroll-reveal-section', { origin: 'bottom' });
+            sr.reveal('.scroll-reveal-card', { origin: 'bottom', interval: 150, scale: 0.95 });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
